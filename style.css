@@ -1,0 +1,397 @@
+* {
+    font-family: "Montserrat";
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 30px;
+    margin: 0 0 16px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+}
+
+p {
+    color: grey;
+    margin: 0 0 16px 0;
+}
+
+section {
+    padding: 64px 120px;
+}
+
+img, iframe {
+    width: 100%;
+}
+
+.btn {
+    background: #ffc108;
+    color: white;
+    padding: 8px 24px;
+}
+
+.btn-alt {
+    background: white;
+    color: black;
+    margin-right: 16px;
+    border: 2px solid #ffc108;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 128px;
+    position: sticky;
+    top: 0;
+    background: whitesmoke;
+    box-shadow: 9px 0 9px grey ;
+    z-index: 3;
+}
+
+nav a:hover {
+    color:#ffc108
+}
+
+
+header h1 {
+    margin: 0;
+    animation: BounchIn 1s;
+}
+
+@keyframes BounchIn {
+   0% {
+    filter: opacity(0);
+    transform: translateY(-20px);
+   }
+   35% {
+    filter: opacity(0.25%);
+    transform: translateY((-10%));
+   }
+   70% {
+    filter: opacity(0.5);
+    transform: translateY(0.5);
+   }
+   100% {
+    filter: opacity(1);
+    transform: translateY(0);
+   }
+}
+
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+.landing img:hover {
+    transform: scale(1.1);
+}
+
+.landing p {
+    margin-bottom: 32px;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+}
+
+#about > div {
+    width: 50%;
+}
+
+#about h1 {
+    font-size: 50px;
+}
+
+nav > a {
+    margin-left: 16px;
+}
+
+#about-stars {
+    display: grid;
+    grid-template-columns:  repeat(3, 1fr);
+    text-align: center;
+    margin-top: 72px;
+}
+
+#about-stars .about-stars-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about-stars .about-stars-item div {
+    width: 50px;
+    height: 10px;
+    background: yellow;
+    margin-bottom: 16px;
+}
+
+.service .service-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.service-header h1 {
+    position:relative;
+}
+
+.service .service-header h1::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("./images/accent1.svg");
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    z-index: -1;
+}
+
+.service-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 128px;
+    margin-top: 72px;
+}
+
+.service-details-item img {
+    width: 100%;
+}
+
+.service-details-item img:hover {
+    filter: brightness(1);
+}
+
+.service-details-item {
+    box-shadow: 1px 2px 4px #979797;
+}
+
+.service-details-item:hover {
+    transform: scale(1.15);
+}
+
+.service-details-item h2 {
+    padding: 0 16px;
+}
+
+.service-details-item p{
+    font-size: 16px;
+    padding: 0 16px;
+}
+
+#contact h1 {
+    position: relative;
+}
+
+#contact h1 > h1::before {
+    content: "";
+    height: 60px;
+    width: 60px;
+    background: url("./images/accent2.svg");
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    z-index: -1;
+    
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+    column-gap: 128px;
+}
+
+.contact-details div, .contact-details form {
+    width: 100%;
+}
+
+.form-grup {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    margin-top: 32px;
+    grid-template-areas: "name subjek"
+                            "email phone"
+                            "messange messange";
+}
+
+.form-grup input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
+    font-size: 20px;
+}
+
+.form-grup input:focus {
+    border-bottom: 1px solid #ffc108;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #ffc108;
+    padding: 64px 32px;
+}
+
+form h1 {
+    font-size: 32px;
+    text-align: center;
+}
+
+form button {
+    border: none;
+    background: #ffc108;
+    padding: 10px 16px;
+    color: white;
+}
+
+form button:hover {
+    color: yellow;
+    background: rgb(169, 169, 0);
+    cursor: pointer;
+}
+
+#input-name {
+    grid-area: name;
+}
+
+#input-subjek {
+    grid-area: subjek;
+}
+
+#input-email {
+    grid-area: email;
+}
+
+#input-phone {
+    grid-area: phone;
+}
+
+#input-messange {
+    grid-area: messange;
+}
+
+
+
+
+.input-grup {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    width: 100%;
+}
+
+.input-grup label {
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+
+.input-grup input {
+    outline: none;
+    border: none;
+    border-bottom: solid 1px black;
+    font-size: 20px;
+}
+
+/* ======= FOOTER ============== */
+
+footer {
+    padding: 16px 128px;
+    background: #ffc108;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    color: aliceblue;
+    width: 50%;
+}
+
+.sosial-icon {
+    display: flex;
+    column-gap: 32px;
+}
+
+
+
+
+/* ============ MEDIA QUERY ============== */
+
+@media only screen and (max-width: 1200px) {
+    .service-details {
+        display: flex;
+        gap: 32px;
+    }
+
+    .contact-details {
+        gap: 24px;
+    }
+    .contact-details .form-grup {
+        display: flex;
+        flex-direction: column;
+    }
+   
+}
+
+
+@media only screen and (max-width: 992px) {
+    header, footer {
+        padding: 16px 32px;
+    }
+
+    section {
+        padding: 64px 32px;
+    }
+    .landing {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .landing div {
+        width: 100%;
+    }
+    #about {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    #about div {
+        width: 100%;
+    }
+    .service-details {
+        column-gap: 16px;
+    }
+    .contact-details {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 64px;
+    }
+    .contact-details form, .contact-details div {
+        width: 100%;
+    }
+}
+
